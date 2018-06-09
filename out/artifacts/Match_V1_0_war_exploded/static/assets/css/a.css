@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+.dd{
+	font-family: PoppinsRegular;
+    font-size: 16px;
+    color: #f3f3f3;
+    padding: 0 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+	
+}
+.radio1{
+	width:35px;
+	height:35px;
+	display:block;
+	float:left;
+}
+#title{
+    position: absolute;
+    right: 22%;
+    font-size: 21px;
+    bottom: 26%;
+    font-family: PoppinsRegular;
+}
+#title1{
+	
+	position: absolute;
+    right: 8%;
+    font-size: 21px;
+    bottom: 26%;
+    font-family: PoppinsRegular;
+}
+
+.block-popup-login .pass-input .pas-c {
+    background: url('../static/assets/images/icons/ee.png') no-repeat center/cover #ababab;
+    content: "";
+    display: inline-block;
+    width: 43px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: auto;
+}
+.block-popup-login .pass-input .pas-d {
+    background: url('../static/assets/images/icons/d.png') no-repeat center/cover #ababab;
+    content: "";
+    display: inline-block;
+    width: 43px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: auto;
+}
+.block-popup-login  .pas-e {
+    background: url('../static/assets/images/icons/sex.png') no-repeat center/cover #ababab;
+    content: "";
+    display: inline-block;
+    width: 43px;
+    height: 40px;
+    position: absolute;
+	bottom: 26%;
+    right: 37.7%;
+}
+#hei{
+	display:block;
+	height:148px;
+	width:1px;
+	background:#ccc;
+	position:absolute;
+	left:50%;
+}
+#re{
+	position:absolute;
+	top:83%;
+	left:40%;
+	
+}
+#cart0,#buyNow{
+	width:100px;
+	height:60px;
+	background:#fa0;
+	font-size:16px;
+	font-family: RobotoBold;
+	box-shadow: 1px 1px 1px 1px #712528;
+	color:#fff;
+}
+#cart0{
+	position:relative;
+    right: 2%;
+    top: 168px;
+}
+#cart0:hover,#buyNow:hover{
+    opacity: 0.79;
+}
+#buyNow{
+    position: relative;
+    top: 167px;
+    right: 52%;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.Match.Dao.CartDao" >
+
+    <select id="query" parameterType="String"  resultType="map">
+        SELECT * FROM cart where 1=1
+        <if test="arg0!=null and arg0!=''">
+            and  name like CONCAT('%',#{arg0},'%')
+        </if>
+        <if test="arg1!=null and arg1!=''">
+           and state like CONCAT('%',#{arg1},'%')
+       </if>
+
+    </select>
+    <!--<select id="queryByName"  parameterType="String" resultType="map">-->
+        <!--SELECT * FROM cart where 1=1-->
+        <!--<if test="name!=null and name!=''">-->
+        <!--name like CONCAT('%',#{name},'%')-->
+    <!--</if>-->
+
+    <!--</select>-->
+    <!--<select id="queryByState"  parameterType="String" resultType="map">-->
+        <!--SELECT * FROM cart where  1=1-->
+        <!--<if test="state!=null and state!=''">-->
+            <!--name like CONCAT('%',#{state},'%')-->
+        <!--</if>-->
+    <!--</select>-->
+    <insert id="addCart" parameterType="map">
+        INSERT  INTO cart(name,typeid,company,price,store,pic,status,descr,clicknum,addtime,state)
+        values(#{name},#{typeid},#{company},#{price},#{store},#{pic},#{status},#{descr},
+        #{clicknum},#{addtime},#{state});
+    </insert>
+        <delete id="deleteGoods" parameterType="int">
+            delete    from cart where id=#{id};
+        </delete>
+    <update id="update" parameterType="map">
+       update cart  set name=#{name},company =#{company},price=#{price},store=#{store},pic=#{pic},status=#{status},descr=#{descr},clicknum=#{clicknum} ,state=#{state} where id=#{id};
+    </update>
+</mapper>
